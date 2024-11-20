@@ -1,20 +1,141 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../css/index_style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Sour+Gummy&display=swap" rel="stylesheet">
+    <link rel="preload" href="../css/style.css" as="style">
+    
+    <link rel="stylesheet" href="../css/style.css">
     <title>Document</title>
 </head>
+
 <body>
-    <div class="flex">
-        <div class="header">header</div>
-        <div class="video">video</div>
-        <div class="nav">nav</div>
-        <div class="main">main</div>
-        <div class="side">side</div>
-        <div class="ads">ads</div>
-        <div class="footer">footer</div>
+    <div class="layout_cont">
+        <!-- #1st Element in grid- Header -->
+        <div class="header_cont">
+            <!-- #1.a. Logo -->
+            <div class="logo_wrap">
+                <!-- <img src="../images/logo/logo_img_opac.png" alt="logo image"> -->
+                <img class="logo_img" src="../images/logo/logo_txt_opac.png" alt="logo text">
+            </div>
+            <!-- #1.b. Search Bar -->
+            <form action="/search" class="search_wrap" method="get">
+                <input type="text" class="search_bar" placeholder="Search">
+                <button class="search_btn"></button>
+            </form>
+            <!-- #1.c. Nav Buttons -->
+            <nav class="top_nav_wrap">
+                <img class="top_nav_item" src="../svgs/shop.svg" alt="shop">
+                <img class="top_nav_item" src="../svgs/user.svg" alt="user">
+            </nav>
+        </div>
+        <!-- #2nd Element in grid- Video -->
+        <div class="video_cont">
+            <!-- #2.a. video -->
+            <video loop muted autoplay playsinline poster="../videos/Teardown.mp4" class="hero_video">
+                <source src="../videos/Teardown.mp4" type="video/mp4">
+                <source src="../videos/Teardown.webm" type="video/webm">
+                <source src="../videos/Teardown.ogv" type="video/ogv">
+                Video is not supported in this browser.
+            </video>
+            <!-- #2.b. text -->
+            <div class="hero_text">
+                <h1>MOTOGEAR HUB</h1>
+                <p>Your first choice for bike parts!</p>
+            </div>
+        </div>
+        <!-- #3th Element in grid- brands banner -->
+        <div class="brand-banner">
+            <div class="slides_wrap">
+                <div class="slide">
+                    <img src="../images/brands/brand1.svg" alt="Brand 1">
+                </div>
+                <div class="slide">
+                    <img src="../images/brands/brand2.svg" alt="Brand 2">
+                </div>
+                <div class="slide">
+                    <img src="../images/brands/brand3.svg" alt="Brand 3">
+                </div>
+                <div class="slide">
+                    <img src="../images/brands/brand4.svg" alt="Brand 4">
+                </div>
+                <div class="slide">
+                    <img src="../images/brands/brand5.svg" alt="Brand 5">
+                </div>
+                <div class="slide">
+                    <img src="../images/brands/brand6.svg" alt="Brand 6">
+                </div>
+            </div>
+        </div>
+        <!-- #4th Element in grid- Shop Menu -->
+        <div class="shop_cont">
+            <!-- #4.a. quick_shop_links -->
+            <div class="quick_shop_links_wrap">
+                <a href="/column1" class="quick_shop_link">Column 1</a>
+                <a href="/column2" class="quick_shop_link">Column 2</a>
+                <a href="/column3" class="quick_shop_link">Column 3</a>
+            </div>
+
+            <!-- #4.b. shop-by component -->
+            <div class="shop_by_wrap">
+                <!-- Radio buttons for OEM and Spare parts selection -->
+                <div class="part-selection">
+                    <label class="part-selection__label">
+                        <input type="radio" name="part-type" id="oem" checked>
+                        <span class="radio-btn"></span>
+                        <span class="label-text">OEM Parts</span>
+                    </label>
+                    <label class="part-selection__label">
+                        <input type="radio" name="part-type" id="spare">
+                        <span class="radio-btn"></span>
+                        <span class="label-text">Spare Parts</span>
+                    </label>
+                </div>
+
+                <!-- Dropdown menu row -->
+                <div class="dropdowns-container">
+                    <select class="dropdown" id="type">
+                        <option value="">Select Type</option>
+                        <option value="street">Street Bike</option>
+                        <option value="dirt">Dirt Bike</option>
+                        <option value="utv">UTV/ATV</option>
+                    </select>
+                    <select class="dropdown" id="year">
+                        <option value="">Select Year</option>
+                        <option value="2020">2020</option>
+                        <option value="2021">2021</option>
+                        <option value="2022">2022</option>
+                    </select>
+                    <select class="dropdown" id="make">
+                        <option value="">Select Make</option>
+                        <option value="honda">Honda</option>
+                        <option value="yamaha">Yamaha</option>
+                        <option value="suzuki">Suzuki</option>
+                    </select>
+                    <select class="dropdown model-dropdown" id="model">
+                        <option value="">Select Model</option>
+                        <option value="model1">Model 1</option>
+                        <option value="model2">Model 2</option>
+                        <option value="model3">Model 3</option>
+                    </select>
+                    <button class="go-button">Go</button>
+                </div>
+            </div>
+
+        </div>
+        <!-- #4 Element in grid- main -->
+        <div class="main_cont">main</div>
+        <!-- #5 Element in grid- side -->
+        <div class="side_cont">side</div>
+        <!-- #6 Element in grid- ads -->
+        <div class="ads_cont">ads</div>
+        <!-- #7 Element in grid- footer -->
+        <div class="footer_cont">footer</div>
     </div>
+    <script src="../js/video_shrink.js"></script>
+
 </body>
+
 </html>

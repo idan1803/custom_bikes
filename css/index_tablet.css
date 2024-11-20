@@ -1,0 +1,63 @@
+/* Tablet */
+@media (width > 600px){
+    .flex {
+        grid-template-rows: repeat(4, auto) 1fr repeat(1, auto);
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-areas:
+            "g_hdr g_hdr g_hdr g_hdr"
+            "g_vid g_vid g_vid g_vid"
+            "g_nav_cont g_nav_cont g_nav_cont g_nav_cont"
+            "g_ads_cont_cont g_main_cont g_main_cont g_main_cont"
+            "g_ads g_foot g_foot g_foot"
+        ;
+    }
+
+    .header_cont {
+        grid-area: g_hdr;
+    }
+
+    .video_cont {
+        grid-area: g_vid;
+    }
+
+    .nav_cont {
+        grid-area: g_nav_cont;
+    }
+
+    .main_cont {
+        grid-area: g_main_cont;
+    }
+
+    .ads_cont_cont {
+        grid-area: g_ads_cont_cont;
+    }
+
+    .ads {
+        grid-area: g_ads;
+    }
+
+    .footer_cont {
+        grid-area: g_foot;
+    }
+}
+
+
+/* .background-video {
+height: 50vh;
+}
+
+.page-hero {
+    position: relative;
+    overflow: hidden;
+}
+
+.background-video-content {
+    position: relative;
+    z-index: 1;
+}
+
+video[poster] {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+} */

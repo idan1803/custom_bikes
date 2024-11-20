@@ -1,0 +1,130 @@
+To achieve the effect of hiding a container and showing a different one when transitioning from a mobile screen to a wider screen in CSS, you can use media queries. This will allow you to specify different styles based on the viewport width, making certain containers visible and others hidden depending on the screen size.
+
+Here’s how you can structure the CSS:
+
+### HTML Example:
+```html
+<div class="container-mobile">
+  <!-- Mobile-specific content -->
+  <p>This is the mobile container.</p>
+</div>
+
+<div class="container-desktop">
+  <!-- Desktop-specific content -->
+  <p>This is the desktop container.</p>
+</div>
+```
+
+### CSS Example:
+```css
+/* Initially, hide both containers */
+.container-mobile, .container-desktop {
+  display: none;
+}
+
+/* For mobile screens (default behavior), show the mobile container */
+@media screen and (max-width: 767px) {
+  .container-mobile {
+    display: block;
+  }
+}
+
+/* For wider screens (like tablets and desktops), show the desktop container */
+@media screen and (min-width: 768px) {
+  .container-desktop {
+    display: block;
+  }
+}
+```
+
+### Explanation:
+- **Default State**: Initially, both `.container-mobile` and `.container-desktop` are hidden (`display: none`).
+- **Mobile Styles**: For screens with a width of 767px or less (typically mobile devices), the `.container-mobile` will be displayed using `display: block`, and the `.container-desktop` will remain hidden.
+- **Desktop Styles**: For screens with a width of 768px or more (tablets and desktops), the `.container-desktop` will be displayed, and the `.container-mobile` will remain hidden.
+
+### Optional Transition:
+If you want to add a smooth transition effect when switching between the containers, you can use CSS transitions. For example:
+
+```css
+.container-mobile, .container-desktop {
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+
+@media screen and (max-width: 767px) {
+  .container-mobile {
+    display: block;
+    opacity: 1;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .container-desktop {
+    display: block;
+    opacity: 1;
+  }
+}
+```
+If you have content that fits both screens (mobile and wider screens), you **don’t** need to repeat it under both media queries. You can write the content once, and use CSS to control visibility based on the screen size.
+
+You can structure it so that the content is displayed differently depending on the screen width, without duplicating the actual content. Here’s how you can approach it:
+
+### Example HTML:
+
+```html
+<div class="container">
+  <!-- Common content for both mobile and desktop -->
+  <p>This is content visible on both mobile and desktop screens.</p>
+
+  <!-- Mobile-specific content -->
+  <div class="mobile-content">
+    <p>This content is only visible on mobile screens.</p>
+  </div>
+
+  <!-- Desktop-specific content -->
+  <div class="desktop-content">
+    <p>This content is only visible on wider screens.</p>
+  </div>
+</div>
+```
+
+### Example CSS:
+
+```css
+/* Hide mobile and desktop specific content by default */
+.mobile-content, .desktop-content {
+  display: none;
+}
+
+/* Show mobile-specific content for small screens */
+@media screen and (max-width: 767px) {
+  .mobile-content {
+    display: block;
+  }
+}
+
+/* Show desktop-specific content for larger screens */
+@media screen and (min-width: 768px) {
+  .desktop-content {
+    display: block;
+  }
+}
+```
+
+### Explanation:
+1. **Common Content**: The paragraph inside `.container` is shared between both mobile and desktop views. It will always be visible.
+2. **Mobile-specific content**: The `.mobile-content` will be displayed only when the screen width is 767px or smaller (mobile devices). On larger screens, it will be hidden.
+3. **Desktop-specific content**: The `.desktop-content` will be shown on screens that are 768px wide or larger (tablets and desktops), and hidden on smaller screens.
+
+### Why this works:
+- By default, we hide both `.mobile-content` and `.desktop-content` with `display: none`.
+- Then, using media queries, we selectively show or hide those containers based on the screen width:
+  - **Mobile view** (`max-width: 767px`): Shows `.mobile-content`.
+  - **Desktop view** (`min-width: 768px`): Shows `.desktop-content`.
+
+### Benefits:
+- **No content duplication**: The content is written only once, but you control which part of it is visible based on the screen size.
+- **Flexibility**: You can include other shared content or styles that are independent of screen size and don’t need to be repeated.
+
+This approach should be scalable and avoid unnecessary repetition of HTML content, which is especially useful for maintaining cleaner code.
+In this case, `opacity` is transitioned when switching containers, giving a smooth fade-in/out effect.
