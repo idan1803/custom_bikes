@@ -14,29 +14,29 @@
 <body>
   <div class="layout_cont">
     <!-- #1st Element in grid- Header -->
-    <div class="header_cont">
+    <Header class="header_cont">
       <!-- #1.a. Logo -->
-      <div class="logo_wrap">
-        <a href="../html/index.html">
-          <img class="logo_img" src="../images/logo/logo_txt_opac.png" alt="logo text">
-        </a>
-
-      </div>
+      <a href="../html/index.html">
+        <img class="logo_img" src="../media/images/logo/logo_txt_opac.png" alt="logo text">
+      </a>
       <!-- #1.b. Search Bar -->
       <form action="/search" class="search_wrap" method="get">
         <input type="text" class="search_bar" placeholder="Search">
-        <img class="search_btn" src="../svgs/search.svg" alt="search">
+        <img class="search_btn" src="../media/svgs/search.svg" alt="search">
       </form>
       <!-- #1.c. Nav Buttons -->
       <nav class="top_nav_wrap">
         <a href="#shop_section">
-          <img class="top_nav_item" src="../svgs/shop.svg" alt="shop">
+          <img class="top_nav_item" src="../media/svgs/shop.svg" alt="shop">
         </a>
-        <a href="#user_section">
-          <img class="top_nav_item" src="../svgs/user.svg" alt="user">
+        <a href="../html/login.html">
+          <img class="top_nav_item" src="../media/svgs/user.svg" alt="user">
+        </a>
+        <a href="../html/events.html">
+          <img class="top_nav_item" src="../media/svgs/events.svg" alt="user">
         </a>
       </nav>
-    </div>
+    </Header>
 
     <main class="container">
       <!-- 1. Product Options -->
@@ -44,7 +44,7 @@
         <header class="sidebar_hdr">
           <h2>Product Options for model PN#</h2>
           <a href="../html/index.html">
-            <img class="top_nav_item" src="../svgs/return.svg" alt="shop">
+            <img class="top_nav_item" src="../media/svgs/return.svg" alt="shop">
           </a>
         </header>
         <div class="filter-group">
@@ -80,11 +80,16 @@
           </div>
       </aside>
 
-      <!-- 2. Option Grid -->
+      <!-- 2. Selected Product -->
       <section class="product_cont">
         <div class="product_card">
           <h3>Selected Product</h3>
-          <img src="https://via.placeholder.com/150" alt="Selected Product">
+          <!-- Image container for switching images -->
+          <div class="image-container">
+            <div class="image image-oem"></div>
+            <div class="image image-refurbished"></div>
+            <div class="image image-spare"></div>
+          </div>
           <p>$200</p>
           <div class="filter-group">
             <button>Add to Cart</button>
@@ -94,9 +99,9 @@
     </main>
 
     <!-- 3. Footer section -->
-    <footer class="about_cont">
-      <!-- 3.a. Payments Secured and Credit Cards Section -->
-      <div class="payments-secured">
+    <footer class="footer_cont">
+      <!-- 7.a. Payments Secured and Credit Cards Section -->
+      <div class="secure_wrap">
         <div class="payment-info">
           <p>PAYMENTS SECURED by Braintree | Progressive | Comoto Holdings, LLC © 2024 All Rights Reserved</p>
         </div>
@@ -108,8 +113,8 @@
           <img src="https://via.placeholder.com/50x30.png?text=Paypal" alt="PayPal">
         </div>
       </div>
-      <!-- 3.b. Legal Section -->
-      <div class="footer-bottom">
+      <!-- 7.b. Legal Section -->
+      <div class="legal_wrap">
         <p>MOTOGEAR HUB © 2024 All Rights Reserved</p>
         <p><a href="#">Privacy Policy</a> | <a href="#">Terms & Conditions</a> | <a href="#">Accessibility
             Statement</a></p>

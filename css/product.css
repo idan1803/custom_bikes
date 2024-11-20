@@ -1,11 +1,4 @@
-/* General Styles */
-body {
-  font-family: Arial, sans-serif;
-  margin: 0;
-  padding: 0;
-  line-height: 1.6;
-  background-color: #f7f7f7;
-}
+@import url('../css/global.css');
 
 header {
   background-color: #333;
@@ -21,8 +14,7 @@ footer {
   padding: 1rem;
 }
 
-h1,
-h2 {
+h1,h2 {
   margin: 0 0 1rem;
 }
 
@@ -137,7 +129,110 @@ h2 {
   color: #555;
 }
 
-/* Responsive Styles */
+/* #################################################
+############  Selected Product Switcher   ##########
+################################################# */
+
+/* .radio_cont {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+} */
+
+.parts_filter_lbl {
+  display: flex;
+  align-items: center;
+  margin-right: 20px;
+  cursor: pointer;
+}
+
+.radio-btn {
+  width: 20px;
+  height: 20px;
+  border: 2px solid #007bff;
+  border-radius: 50%;
+  margin-right: 8px;
+  position: relative;
+  display: inline-block;
+}
+
+.radio-btn:before {
+  content: '';
+  position: absolute;
+  top: 4px;
+  left: 4px;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: #007bff;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+input[type="radio"]:checked + .radio-btn:before {
+  opacity: 1;
+}
+
+.label-text {
+  font-size: 16px;
+  color: #333;
+}
+
+/* Hide the radio buttons */
+input[type="radio"] {
+  display: none;
+}
+
+/* Image container */
+.image-container {
+  width: 300px;
+  height: 200px;
+  margin-top: 20px;
+  position: relative;
+}
+
+/* Image settings */
+.image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+/* Background images */
+.image-oem {
+  background-image: url('../media/images/products/product1/akrapovic_exhaust_system_yamaha_r32015_750x750.jpg');
+}
+
+.image-refurbished {
+  background-image: url('../media/images/products/product1/arrow_pro_race_slip_on_exhaust_suzuki_gsxr100020072008_stainless_steel_750x750.jpg');
+}
+
+.image-spare {
+  background-image: url('..//home/idan/Dev/Full_Stack_Class/Main_Projects/motogear_hub/media/images/products/product1/graves_motorsports_hexagonal_slip_on_exhaust_carbon_fiber_750x750.jpg');
+}
+
+/* Show images based on radio selection */
+input[type="radio"]#oem:checked ~ .image-container .image-oem {
+  opacity: 1;
+}
+
+input[type="radio"]#refurbished:checked ~ .image-container .image-refurbished {
+  opacity: 1;
+}
+
+input[type="radio"]#spare:checked ~ .image-container .image-spare {
+  opacity: 1;
+}
+
+/* #################################################
+#####  Responsive Design for smaller screens   #####
+################################################# */
 @media (max-width: 768px) {
   .container {
     grid-template-columns: 1fr;
