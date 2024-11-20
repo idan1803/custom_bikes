@@ -4,11 +4,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- imported google font for global design -->
     <link href="https://fonts.googleapis.com/css2?family=Sour+Gummy&display=swap" rel="stylesheet">
+    <!-- preload css for better performance -->
     <link rel="preload" href="../css/style.css" as="style">
-
+    <!-- icons for social media -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+    <!--main design for index -->
     <link rel="stylesheet" href="../css/style.css">
-    <title>MOTOGEAR HUB</title>
+    <title>MOTOGEAR HUB Store</title>
 </head>
 
 <body>
@@ -17,8 +21,10 @@
         <div class="header_cont">
             <!-- #1.a. Logo -->
             <div class="logo_wrap">
-                <!-- <img src="../images/logo/logo_img_opac.png" alt="logo image"> -->
-                <img class="logo_img" src="../images/logo/logo_txt_opac.png" alt="logo text">
+                <a href="../html/index.html">
+                    <img class="logo_img" src="../images/logo/logo_txt_opac.png" alt="logo text">
+                </a>
+
             </div>
             <!-- #1.b. Search Bar -->
             <form action="/search" class="search_wrap" method="get">
@@ -27,10 +33,15 @@
             </form>
             <!-- #1.c. Nav Buttons -->
             <nav class="top_nav_wrap">
-                <img class="top_nav_item" src="../svgs/shop.svg" alt="shop">
-                <img class="top_nav_item" src="../svgs/user.svg" alt="user">
+                <a href="#shop_section">
+                    <img class="top_nav_item" src="../svgs/shop.svg" alt="shop">
+                </a>
+                <a href="#user_section">
+                    <img class="top_nav_item" src="../svgs/user.svg" alt="user">
+                </a>
             </nav>
         </div>
+
         <!-- #2nd Element in grid- Video -->
         <div class="video_cont">
             <!-- #2.a. video -->
@@ -46,6 +57,7 @@
                 <p>Your first choice for bike parts!</p>
             </div>
         </div>
+
         <!-- #3th Element in grid- brands banner -->
         <div class="brand-banner">
             <div class="slides_wrap">
@@ -69,32 +81,33 @@
                 </div>
             </div>
         </div>
+
         <!-- #4th Element in grid- Shop Menu -->
-        <div class="shop_cont">
+        <div class="quick_shop_cont" id="#shop_section">
             <!-- #4.a. quick_shop_links -->
             <div class="quick_shop_links_wrap">
-                <a href="/column1" class="quick_shop_link">NEW</a>
-                <a href="/column2" class="quick_shop_link">SALE</a>
-                <a href="/column3" class="quick_shop_link">SHOP ALL</a>
+                <a href="../html/gallery.html" class="quick_shop_link">NEW</a>
+                <a href="../html/gallery.html" class="quick_shop_link">SALE</a>
+                <a href="../html/gallery.html" class="quick_shop_link">SHOP ALL</a>
             </div>
 
             <!-- #4.b. shop-by component -->
             <div class="shop_by_wrap">
-                <!-- Radio buttons for OEM and Spare parts selection -->
-                <div class="part-selection">
-                    <label class="part-selection__label">
+                <!-- 4.b.1 Radio buttons for OEM and Spare parts selection -->
+                <div class="parts_filter">
+                    <label class="parts_filter_lbl">
                         <input type="radio" name="part-type" id="oem" checked>
                         <span class="radio-btn"></span>
                         <span class="label-text">OEM Parts</span>
                     </label>
-                    <label class="part-selection__label">
+                    <label class="parts_filter_lbl">
                         <input type="radio" name="part-type" id="spare">
                         <span class="radio-btn"></span>
                         <span class="label-text">Spare Parts</span>
                     </label>
                 </div>
 
-                <!-- Dropdown menu row -->
+                <!-- 4.b.2 Dropdown menu row -->
                 <div class="dropdowns-container">
                     <select class="dropdown" id="type">
                         <option value="">Select Type</option>
@@ -120,21 +133,182 @@
                         <option value="model2">Model 2</option>
                         <option value="model3">Model 3</option>
                     </select>
-                    <button class="go-button">Go</button>
+                    <a href="../html/gallery.html">
+                        <button class="go-button">Go</button>
+                    </a>
                 </div>
             </div>
 
         </div>
-        <!-- #4 Element in grid- main -->
-        <div class="main_cont">main</div>
-        <!-- #5 Element in grid- side -->
-        <div class="side_cont">side</div>
-        <!-- #6 Element in grid- ads -->
-        <div class="ads_cont">ads</div>
-        <!-- #7 Element in grid- footer -->
-        <div class="footer_cont">footer</div>
-    </div>
-    <script src="../js/video_shrink.js"></script>
+        <!-- #5th Element in grid- main -->
+        <div class="catagories_cont">
+
+            <!-- 5.a. Product Grid -->
+            <div class="catagoory_card">
+                <img src="../images/catagories/Air Cleaners.avif" alt="Air Cleaners">
+                <h3>Air Cleaners</h3>
+            </div>
+            <div class="catagoory_card">
+                <img src="../images/catagories/Audio & Speakers.avif" alt="Audio & Speakers">
+                <h3>Audio & Speakers</h3>
+            </div>
+            <div class="catagoory_card">
+                <img src="../images/catagories/Batteries & Electrical.avif" alt="Batteries & Electrical">
+                <h3>Batteries & Electrical</h3>
+            </div>
+            <div class="catagoory_card">
+                <img src="../images/catagories/Bike Protection.avif" alt="Bike Protection">
+                <h3>Bike Protection</h3>
+            </div>
+            <div class="catagoory_card">
+                <img src="../images/catagories/Bike Protection.avif" alt="Bike Protection">
+                <h3>Bike Protection</h3>
+            </div>
+            <div class="catagoory_card">
+                <img src="../images/catagories/Body, Fairing & Fender.avif" alt="Body, Fairing & Fender">
+                <h3>Body, Fairing & Fender</h3>
+            </div>
+            <div class="catagoory_card">
+                <img src="../images/catagories/Brakes.avif" alt="Brakes">
+                <h3>Brakes</h3>
+            </div>
+            <div class="catagoory_card">
+                <img src="../images/catagories/Dash & Gauges.avif" alt="Dash & Gauges">
+                <h3>Dash & Gauges</h3>
+            </div>
+            <div class="catagoory_card">
+                <img src="../images/catagories/Drive & Transmission.avif" alt="Drive & Transmission">
+                <h3>Drive & Transmission</h3>
+            </div>
+            <div class="catagoory_card">
+                <img src="../images/catagories/Engine.avif" alt="Engine">
+                <h3>Engine</h3>
+            </div>
+            <div class="catagoory_card">
+                <img src="../images/catagories/Exhaust.avif" alt="Exhaust">
+                <h3>Exhaust</h3>
+            </div>
+            <div class="catagoory_card">
+                <img src="../images/catagories/Filters.avif" alt="Filters">
+                <h3>Filters</h3>
+            </div>
+            <div class="catagoory_card">
+                <img src="../images/catagories/Foot Controls.avif" alt="Foot Controls">
+                <h3>Foot Controls</h3>
+            </div>
+            <div class="catagoory_card">
+                <img src="../images/catagories/Fuel Management.avif" alt="Fuel Management">
+                <h3>Fuel Management</h3>
+            </div>
+            <div class="catagoory_card">
+                <img src="../images/catagories/Handlebars & Controls.avif" alt="Handlebars & Controls">
+                <h3>Handlebars & Controls</h3>
+            </div>
+            <div class="catagoory_card">
+                <img src="../images/catagories/Lighting.avif" alt="Lighting">
+                <h3>Lighting</h3>
+            </div>
+            <div class="catagoory_card">
+                <img src="../images/catagories/Mirrors & Accessories.avif" alt="Mirrors & Accessories">
+                <h3>Mirrors & Accessories</h3>
+            </div>
+            <div class="catagoory_card">
+                <img src="../images/catagories/Seats & Sissybars.avif" alt="Seats & Sissybars">
+                <h3>Seats & Sissybars</h3>
+            </div>
+            <div class="catagoory_card">
+                <img src="../images/catagories/Suspension & Frame.avif" alt="Suspension & Frame">
+                <h3>Suspension & Frame</h3>
+            </div>
+            <div class="catagoory_card">
+                <img src="../images/catagories/Wheel & Axle.avif" alt="Wheel & Axle">
+                <h3>Wheel & Axle</h3>
+            </div>
+            <div class="catagoory_card">
+                <img src="../images/catagories/Windshields & Windscreens.avif" alt="Windshields & Windscreens">
+                <h3>Windshields & Windscreens</h3>
+            </div>
+        </div>
+
+        <!-- #6th Element in grid- about section -->
+        <footer class="about_cont">
+            <!-- 6.a. About Section -->
+            <div class="footer-section about">
+                <h3>About Us</h3>
+                <ul>
+                    <li><a href="#">Riders Membership</a></li>
+                    <li><a href="#">Why Shop Us?</a></li>
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">Affiliate Program</a></li>
+                    <li><a href="#">Careers</a></li>
+                    <li><a href="#">Discount Codes</a></li>
+                    <li><a href="#">Events</a></li>
+                    <li><a href="#">Common Tread Blog</a></li>
+                    <li><a href="#">FAQ</a></li>
+                </ul>
+            </div>
+            <!-- 6.b. Customer Service Section -->
+            <div class="footer-section customer-service">
+                <h3>Customer Service</h3>
+                <ul>
+                    <li><a href="#">Contact Us</a></li>
+                    <li><a href="#">Return Policy</a></li>
+                    <li><a href="#">Shipping Policies</a></li>
+                    <li><a href="#">Price Match Policy</a></li>
+                    <li><a href="#">Gift Certificate Policy</a></li>
+                    <li><a href="#">Police / Military / Fire / EMS Discount</a></li>
+                    <li><a href="#">Recalls / Product Notices</a></li>
+                    <li><a href="#">Order Status</a></li>
+                    <li><a href="#">Bulk Orders</a></li>
+                    <li><a href="#">Discount Exclusions</a></li>
+                </ul>
+            </div>
+            <!-- 6.c. Contact Info Section -->
+            <div class="footer-section contact-info">
+                <h3>Contact Info</h3>
+                <ul>
+                    <li>Phone: +1 (215) 334-5500</li>
+                    <li><a href="#">Start a Return</a></li>
+                    <li><a href="#">Leave Feedback</a></li>
+                </ul>
+                <h3>Follow Us</h3>
+                <ul>
+                    <li><a href="#"><i class="fab fa-facebook-f"></i> Facebook</a></li>
+                    <li><a href="#"><i class="fab fa-instagram"></i> Instagram</a></li>
+                    <li><a href="#"><i class="fab fa-twitter"></i> Twitter</a></li>
+                    <li><a href="#"><i class="fab fa-youtube"></i> YouTube</a></li>
+                </ul>
+
+            </div>
+        </footer>
+
+        <!-- #7th Element in grid- about section -->
+        <footer class="about_cont">
+            <!-- 7.a. Payments Secured and Credit Cards Section -->
+            <div class="payments-secured">
+                <div class="payment-info">
+                    <p>PAYMENTS SECURED by Braintree | Progressive | Comoto Holdings, LLC © 2024 All Rights Reserved</p>
+                </div>
+                <div class="credit-cards">
+                    <h4>We Accept:</h4>
+                    <img src="https://via.placeholder.com/50x30.png?text=Visa" alt="Visa">
+                    <img src="https://via.placeholder.com/50x30.png?text=Mastercard" alt="Mastercard">
+                    <img src="https://via.placeholder.com/50x30.png?text=Amex" alt="American Express">
+                    <img src="https://via.placeholder.com/50x30.png?text=Paypal" alt="PayPal">
+                </div>
+            </div>
+            <!-- 7.b. Legal Section -->
+            <div class="footer-bottom">
+                <p>MOTOGEAR HUB © 2024 All Rights Reserved</p>
+                <p><a href="#">Privacy Policy</a> | <a href="#">Terms & Conditions</a> | <a href="#">Accessibility
+                        Statement</a></p>
+            </div>
+        </footer>
+
+</body>
+
+
+<script src="../js/video_shrink.js"></script>
 
 </body>
 
