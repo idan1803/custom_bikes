@@ -42,7 +42,8 @@ h2 {
   justify-content: space-between;
 }
 
-.sidebar,.results_hdr {
+.sidebar,
+.results_hdr {
   background-color: #fff;
   padding: 1rem;
   border: 1px solid #ddd;
@@ -83,37 +84,15 @@ h2 {
   font-weight: bold;
 }
 
-.radio_cont {
-  display: flex;
-  gap: 20px;
-  margin-bottom: 20px;
-}
 
-.radio_cont_lbl {
-  display: flex;
-  align-items: center;
-  cursor: pointer;
-  font-size: 16px;
-}
-
-.radio_cont_lbl input {
-  display: none;
-  /* Hide default radio button */
-}
-
-.radio_cont_lbl input:checked+.radio-btn:before {
-  background-color: #f1c40f;
-    /* Yellow color when selected */
-}
-
-/* Product Grid */
-.product_grid {
+/* model Grid */
+.model_grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   gap: 1rem;
 }
 
-.product_card {
+.model_card {
   background-color: #fff;
   border: 1px solid #ddd;
   border-radius: 5px;
@@ -121,18 +100,18 @@ h2 {
   padding: 1rem;
 }
 
-.product_card img {
-  width: 50%;
+.model_card img {
+  width: 100%;
   height: auto;
   border-bottom: 1px solid #ddd;
   margin-bottom: 1rem;
 }
 
-.product_card h3 {
+.model_card h3 {
   margin: 0 0 0.5rem;
 }
 
-.product_card p {
+.model_card p {
   font-size: 1.1rem;
   color: #555;
 }

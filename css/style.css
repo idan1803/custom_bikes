@@ -287,11 +287,15 @@ body {
     background-color: #a6a6a6;
     margin: 1em;
     border-radius: 1em;
+
+    /* display: flex;
+    flex-direction: row-reverse; */
 }
 
 .quick_shop_links_wrap {
     display: flex;
     justify-content: space-around;
+    margin-inline: 10vw;
     /* evenly spaces the links */
     align-items: center;
     flex-wrap: wrap;
@@ -336,20 +340,20 @@ body {
     /* rounded corners */
 }
 
-.parts_filter {
+.parts_radio {
     display: flex;
     gap: 20px;
-    margin-bottom: 20px;
+    margin-inline: 40px;
 }
 
-.parts_filter_lbl {
+.parts_radio_lbl {
     display: flex;
     align-items: center;
     cursor: pointer;
     font-size: 16px;
 }
 
-.parts_filter_lbl input {
+.parts_radio_lbl input {
     display: none;
     /* Hide default radio button */
 }
@@ -375,7 +379,7 @@ body {
     transition: all 0.3s ease;
 }
 
-.parts_filter_lbl input:checked+.radio-btn:before {
+.parts_radio_lbl input:checked+.radio-btn:before {
     background-color: #f1c40f;
     /* Yellow color when selected */
 }
@@ -390,6 +394,7 @@ body {
     gap: 20px;
     align-items: center;
     justify-content: flex-start;
+    margin-bottom: 20px;
 }
 
 .dropdown,
@@ -590,7 +595,7 @@ button.go-button:hover {
         /* Full width on smaller screens */
     }
 
-    .parts_filter {
+    .parts_radio {
         justify-content: center;
     }
 

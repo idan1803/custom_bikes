@@ -4,10 +4,10 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Product Page</title>
+  <title>MOTOGEAR HUB Gallery</title>
   <link href="https://fonts.googleapis.com/css2?family=Sour+Gummy&display=swap" rel="stylesheet">
-  <link rel="preload" href="../css/product.css" as="style">
-  <link rel="stylesheet" href="../css/product.css">
+  <link rel="preload" href="../css/gallery.css" as="style">
+  <link rel="stylesheet" href="../css/gallery.css">
   <link rel="stylesheet" href="../css/style.css">
 </head>
 
@@ -15,35 +15,41 @@
   <div class="layout_cont">
     <!-- #1st Element in grid- Header -->
     <div class="header_cont">
-        <!-- #1.a. Logo -->
-        <div class="logo_wrap">
-            <a href="../html/index.html">
-                <img class="logo_img" src="../images/logo/logo_txt_opac.png" alt="logo text">
-            </a>
+      <!-- #1.a. Logo -->
+      <div class="logo_wrap">
+        <a href="../html/index.html">
+          <img class="logo_img" src="../images/logo/logo_txt_opac.png" alt="logo text">
+        </a>
 
-        </div>
-        <!-- #1.b. Search Bar -->
-        <form action="/search" class="search_wrap" method="get">
-            <input type="text" class="search_bar" placeholder="Search">
-            <img class="search_btn" src="../svgs/search.svg" alt="search">
-        </form>
-        <!-- #1.c. Nav Buttons -->
-        <nav class="top_nav_wrap">
-            <a href="#shop_section">
-                <img class="top_nav_item" src="../svgs/shop.svg" alt="shop">
-            </a>
-            <a href="#user_section">
-                <img class="top_nav_item" src="../svgs/user.svg" alt="user">
-            </a>
-        </nav>
+      </div>
+      <!-- #1.b. Search Bar -->
+      <form action="/search" class="search_wrap" method="get">
+        <input type="text" class="search_bar" placeholder="Search">
+        <img class="search_btn" src="../svgs/search.svg" alt="search">
+      </form>
+      <!-- #1.c. Nav Buttons -->
+      <nav class="top_nav_wrap">
+        <a href="#shop_section">
+          <img class="top_nav_item" src="../svgs/shop.svg" alt="shop">
+        </a>
+        <a href="#user_section">
+          <img class="top_nav_item" src="../svgs/user.svg" alt="user">
+        </a>
+      </nav>
     </div>
 
     <main class="container">
-      <!-- Sidebar -->
+      <!-- 1. Model Options -->
       <aside class="sidebar">
-        <h2>Filters</h2>
+        <header class="sidebar_hdr">
+          <h2>Catagory > Filters</h2>
+          <a href="../html/index.html">
+            <img class="top_nav_item" src="../svgs/return.svg" alt="shop">
+          </a>
+        </header>
+        <!-- 1.a filter by brand/model -->
         <div class="filter-group">
-          <label for="category">Category:</label>
+          <label for="category">Model #PN:</label>
           <select id="category">
             <option>All</option>
             <option>Brakes</option>
@@ -51,12 +57,12 @@
             <option>Exhaust</option>
           </select>
         </div>
+        <!-- 1.b Slider for price range -->
         <div class="filter-group">
           <label for="price-range">Price Range:</label>
           <input type="range" id="price-range" min="0" max="1000" value="500">
           <div class="price-labels">
             <span id="min-price">$0</span>
-            <!-- <span id="current-price">$500</span> -->
             <span id="max-price">$1000</span>
           </div>
         </div>
@@ -65,33 +71,64 @@
         </div>
       </aside>
 
-      <!-- Product Grid -->
-      <section class="product_grid">
-        <div class="product_card">
-          <img src="https://via.placeholder.com/150" alt="Brake Pads">
-          <h3>Brake Pads</h3>
-          <p>$50</p>
+      <!-- 2. Model Grid -->
+      <!-- <h2 class="results_hdr">Available Models</h2> -->
+      <section class="model_grid">
+        <div class="model_card">
+          <a href="../html/product.html">
+            <img src="https://via.placeholder.com/150" alt="Brake Pads">
+            <h3>Brake Pads</h3>
+            <p>$50</p>
+          </a>
         </div>
-        <div class="product_card">
-          <img src="https://via.placeholder.com/150" alt="Suspension Kit">
-          <h3>Suspension Kit</h3>
-          <p>$200</p>
+
+        <div class="model_card">
+          <a href="../html/product.html">
+            <img src="https://via.placeholder.com/150" alt="Suspension Kit">
+            <h3>Suspension Kit</h3>
+            <p>$200</p>
+          </a>
         </div>
-        <div class="product_card">
-          <img src="https://via.placeholder.com/150" alt="Exhaust System">
-          <h3>Exhaust System</h3>
-          <p>$350</p>
+
+        <div class="model_card">
+          <a href="../html/product.html">
+            <img src="https://via.placeholder.com/150" alt="Exhaust System">
+            <h3>Exhaust System</h3>
+            <p>$350</p>
+          </a>
         </div>
-        <div class="product_card">
-          <img src="https://via.placeholder.com/150" alt="Oil Filter">
-          <h3>Oil Filter</h3>
-          <p>$25</p>
-        </div> <!-- Add more product cards as needed -->
+
+        <div class="model_card">
+          <a href="../html/product.html">
+            <img src="https://via.placeholder.com/150" alt="Oil Filter">
+            <h3>Oil Filter</h3>
+            <p>$25</p>
+          </a>
+        </div> <!-- Add more model cards as needed -->
       </section>
     </main>
 
-    <footer>
-      <p>© 2024 Motorcycle Parts Store. All rights reserved.</p>
+    <!-- 3. Footer section -->
+    <footer class="about_cont">
+      <!-- 3.a. Payments Secured and Credit Cards Section -->
+      <div class="payments-secured">
+        <div class="payment-info">
+          <p>PAYMENTS SECURED by Braintree | Progressive | Comoto Holdings, LLC © 2024 All Rights Reserved</p>
+        </div>
+        <div class="credit-cards">
+          <h4>We Accept:</h4>
+          <img src="https://via.placeholder.com/50x30.png?text=Visa" alt="Visa">
+          <img src="https://via.placeholder.com/50x30.png?text=Mastercard" alt="Mastercard">
+          <img src="https://via.placeholder.com/50x30.png?text=Amex" alt="American Express">
+          <img src="https://via.placeholder.com/50x30.png?text=Paypal" alt="PayPal">
+        </div>
+      </div>
+      <!-- 3.b. Legal Section -->
+      <div class="footer-bottom">
+        <p>MOTOGEAR HUB © 2024 All Rights Reserved</p>
+        <p><a href="#">Privacy Policy</a> | <a href="#">Terms & Conditions</a> | <a href="#">Accessibility
+            Statement</a></p>
+      </div>
     </footer>
 </body>
 
