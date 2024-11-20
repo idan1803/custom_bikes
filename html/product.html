@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Product Page</title>
+  <link href="https://fonts.googleapis.com/css2?family=Sour+Gummy&display=swap" rel="stylesheet">
+  <link rel="preload" href="../css/product.css" as="style">
+  <link rel="stylesheet" href="../css/product.css">
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+
+<body>
+    <div class="layout_cont">
+        <!-- #1st Element in grid- Header -->
+        <div class="header_cont">
+            <!-- #1.a. Logo -->
+            <div class="logo_wrap">
+                <!-- <img src="../images/logo/logo_img_opac.png" alt="logo image"> -->
+                <img class="logo_img" src="../images/logo/logo_txt_opac.png" alt="logo text">
+            </div>
+            <!-- #1.b. Search Bar -->
+            <form action="/search" class="search_wrap" method="get">
+                <input type="text" class="search_bar" placeholder="Search">
+                <img class="search_btn" src="../svgs/search.svg" alt="search">
+            </form>
+            <!-- #1.c. Nav Buttons -->
+            <nav class="top_nav_wrap">
+                <img class="top_nav_item" src="../svgs/shop.svg" alt="shop">
+                <img class="top_nav_item" src="../svgs/user.svg" alt="user">
+            </nav>
+        </div>
+
+  <main class="container">
+    <!-- Sidebar -->
+    <aside class="sidebar">
+      <h2>Filters</h2>
+      <div class="filter-group">
+        <label for="category">Category:</label>
+        <select id="category">
+          <option>All</option>
+          <option>Brakes</option>
+          <option>Suspension</option>
+          <option>Exhaust</option>
+        </select>
+      </div>
+      <div class="filter-group">
+        <label for="price-range">Price Range:</label>
+        <input type="range" id="price-range" min="0" max="1000">
+      </div>
+      <div class="filter-group">
+        <button>Apply Filters</button>
+      </div>
+    </aside>
+
+    <!-- Product Grid -->
+    <section class="product-grid">
+      <div class="product-card">
+        <img src="https://via.placeholder.com/150" alt="Brake Pads">
+        <h3>Brake Pads</h3>
+        <p>$50</p>
+      </div>
+      <div class="product-card">
+        <img src="https://via.placeholder.com/150" alt="Suspension Kit">
+        <h3>Suspension Kit</h3>
+        <p>$200</p>
+      </div>
+      <div class="product-card">
+        <img src="https://via.placeholder.com/150" alt="Exhaust System">
+        <h3>Exhaust System</h3>
+        <p>$350</p>
+      </div>
+      <div class="product-card">
+        <img src="https://via.placeholder.com/150" alt="Oil Filter">
+        <h3>Oil Filter</h3>
+        <p>$25</p>
+      </div>
+      <!-- Add more product cards as needed -->
+    </section>
+  </main>
+
+  <footer>
+    <p>© 2024 Motorcycle Parts Store. All rights reserved.</p>
+  </footer>
+</body>
+</html>

@@ -128,9 +128,11 @@ body {
 
 /* Search button styling */
 .search_btn {
-    padding: 0.8rem;
-    background-color: transparent;
-    border: none;
+    position: relative;
+    right: 50px;
+    width: 2rem;
+    height: 2rem;    padding: 0.8rem;
+
     cursor: pointer;
     transition: transform 0.3s ease, background-color 0.3s ease;
 }
@@ -139,7 +141,7 @@ body {
 .search_btn:hover {
     transform: scale(1.1);
     /* slightly enlarge on hover */
-    background-color: #f1f1f1;
+    /* background-color: #f1f1f1; */
     /* subtle background color */
 }
 
@@ -273,9 +275,15 @@ body {
 #####   #4rd Element in grid- Shop By Comp.    #####
 ################################################# */
 
+.shop_cont{
+    background-color: #a6a6a6;
+    margin: 1em;
+    border-radius: 1em;
+}
+
 .quick_shop_links_wrap {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     /* evenly spaces the links */
     align-items: center;
     flex-wrap: wrap;
@@ -314,7 +322,6 @@ body {
     max-width: 1200px;
     margin: auto;
 
-    background-color: black;
     border-radius: 1rem;
     /* rounded corners */
 }
