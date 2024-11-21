@@ -1,4 +1,6 @@
-/archive/*
-/inspiration/*
-!.gitkeep
+# Ignore the "archive" folder
+/archive/
+
+# Ignore the "inspiration" folder
+/inspiration/
 
