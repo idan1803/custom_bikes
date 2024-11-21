@@ -4,11 +4,12 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Product Page</title>
+  <title>Product | Checkout</title>
+  <!-- imported google font for global design -->
   <link href="https://fonts.googleapis.com/css2?family=Sour+Gummy&display=swap" rel="stylesheet">
-  <link rel="preload" href="../css/product.css" as="style">
+  <!-- icons for social media n footer -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
   <link rel="stylesheet" href="../css/product.css">
-  <link rel="stylesheet" href="../css/style.css">
 </head>
 
 <body>
@@ -38,88 +39,95 @@
       </nav>
     </Header>
 
-    <main class="container">
+    <main class="product_cont">
       <!-- 1. Product Options -->
-      <aside class="sidebar">
-        <header class="sidebar_hdr">
-          <h2>Product Options for model PN#</h2>
-          <a href="../html/index.html">
-            <img class="top_nav_item" src="../media/svgs/return.svg" alt="shop">
-          </a>
-        </header>
+      <header class="product_hdr">
+        <h2>Exhaust Kit | PN-36362 > Options </h2>
+        <a href="../html/gallery.html">
+          <img class="return_btn" src="../media/svgs/return.svg" alt="shop">
+        </a>
+      </header>
+      <!-- 1.a Slider for warrenty -->
+      <div class="filter-group">
+        <label for="warrenty">Warrenty:</label>
+        <input type="range" id="warrenty" min="0" max="3" value="1">
+        <div class="warrenty-labels">
+          <span id="min-warrenty">None</span>
+          <span id="max-warrenty">3 Years</span>
+        </div>
+        <div class="price-labels">
+          <span id="min-price">$0</span>
+          <span id="max-price">$600</span>
+        </div>
+      </div>
+      <!-- 1.b Radio for Quality -->
+      <div class="radio_global img_selector_cont">
+        <label class="radio_lbl_global" for="radio-oem">
+          <input class="radio_input" type="radio" name="part-type" id="radio-oem" checked>
+          <span class="radio_btn"></span>
+          <span class="radio_txt">OEM</span>
+        </label>
+        <label class="radio_lbl_global" for="radio-refurbished">
+          <input class="radio_input" type="radio" name="part-type" id="radio-refurbished">
+          <span class="radio_btn"></span>
+          <span class="radio_txt">Refurbished</span>
+        </label>
+        <label class="radio_lbl_global" for="radio-used">
+          <input class="radio_input" type="radio" name="part-type" id="radio-used">
+          <span class="radio_btn"></span>
+          <span class="radio_txt">Used</span>
+        </label>
+      </div>
+      <!-- 1.c. Seleced Product Image -->
+      <div class="image_wrap">
+        <img src="../media/images/products/product3/akrapovic_exhaust_headers_linkage_pipes_750x750.jpg"
+          alt="OEM Product" class="product_image" id="img-eom">
+        <!-- <img src="../media/images/products/product3/graves_exhaust_headers_kawasaki_zx6_rzx63620152018_750x750.jpg"
+          alt="Refurbished Product" class="product_image" id="img-refurbished">
+        <img src="../media/images/products/product3/graves_exhaust_headers_kawasaki_zx7_rzx63620152018_750x750.jpg"
+          alt="Used Product" class="product_image" id="img-used"> -->
+      </div>
+      <!-- 1.d buy -->
+      <div class="buy_wrap">
         <div class="filter-group">
-          <button>Apply Filters</button>
+          <button class="btn_global">Add to Cart</button>
         </div>
-        <div class="shop_by_wrap">
-          <!-- 1.a Radio buttons for OEM and Spare parts selection -->
-          <div class="filter-group">
-            <label for="price-range">Warrenty Duration (Years):</label>
-            <input type="range" id="price-range" min="1" max="3" value="0">
-            <div class="price-labels">
-              <span id="min-price">none</span>
-              <span id="max-price">3 years</span>
-            </div>
-          </div>
-          <!-- 1.b Radio buttons for OEM and Spare parts selection -->
-          <div class="radio_cont">
-            <label class="parts_filter_lbl">
-              <input type="radio" name="part-type" id="oem" checked>
-              <span class="radio-btn"></span>
-              <span class="label-text">OEM</span>
-            </label>
-            <label class="parts_filter_lbl">
-              <input type="radio" name="part-type" id="spare">
-              <span class="radio-btn"></span>
-              <span class="label-text">Refurbished (w/ warrenty)</span>
-            </label>
-            <label class="parts_filter_lbl">
-              <input type="radio" name="part-type" id="spare">
-              <span class="radio-btn"></span>
-              <span class="label-text">Spare</span>
-            </label>
-          </div>
-      </aside>
-
-      <!-- 2. Selected Product -->
-      <section class="product_cont">
-        <div class="product_card">
-          <h3>Selected Product</h3>
-          <!-- Image container for switching images -->
-          <div class="image-container">
-            <div class="image image-oem"></div>
-            <div class="image image-refurbished"></div>
-            <div class="image image-spare"></div>
-          </div>
-          <p>$200</p>
-          <div class="filter-group">
-            <button>Add to Cart</button>
-          </div>
+        <div class="filter-group">
+          <button class="btn_global">Checkout</button>
         </div>
-      </section>
+      </div>
     </main>
 
     <!-- 3. Footer section -->
     <footer class="footer_cont">
       <!-- 7.a. Payments Secured and Credit Cards Section -->
-      <div class="secure_wrap">
-        <div class="payment-info">
-          <p>PAYMENTS SECURED by Braintree | Progressive | Comoto Holdings, LLC © 2024 All Rights Reserved</p>
-        </div>
-        <div class="credit-cards">
-          <h4>We Accept:</h4>
-          <img src="https://via.placeholder.com/50x30.png?text=Visa" alt="Visa">
-          <img src="https://via.placeholder.com/50x30.png?text=Mastercard" alt="Mastercard">
-          <img src="https://via.placeholder.com/50x30.png?text=Amex" alt="American Express">
-          <img src="https://via.placeholder.com/50x30.png?text=Paypal" alt="PayPal">
-        </div>
+      <div class="social_links">
+        <h4>Follow Us</h4>
+        <ul>
+          <li><a href="#"><i class="fab fa-facebook-f"></i> Facebook</a></li>
+          <li><a href="#"><i class="fab fa-instagram"></i> Instagram</a></li>
+          <li><a href="#"><i class="fab fa-twitter"></i> Twitter</a></li>
+          <li><a href="#"><i class="fab fa-youtube"></i> YouTube</a></li>
+        </ul>
+      </div>
+      <div class="payment_info">
+        <h4>Payment Methods</h4>
+        <img src="../media/images/credit_cards/american-express.svg" alt="American Express">
+        <img src="../media/images/credit_cards/discover.svg" alt="Discover">
+        <img src="../media/images/credit_cards/master-card.svg" alt="Mastercard">
+        <img src="../media/images/credit_cards/pay_pal.svg" alt="PayPal">
+        <img src="../media/images/credit_cards/visa.svg" alt="Visa">
+        <p>PAYMENTS SECURED by Braintree | Progressive | Comoto Holdings, LLC © 2024 All Rights Reserved</p>
       </div>
       <!-- 7.b. Legal Section -->
       <div class="legal_wrap">
+        <h4>Legal</h4>
         <p>MOTOGEAR HUB © 2024 All Rights Reserved</p>
         <p><a href="#">Privacy Policy</a> | <a href="#">Terms & Conditions</a> | <a href="#">Accessibility
             Statement</a></p>
       </div>
     </footer>
+
 </body>
 
 </html>

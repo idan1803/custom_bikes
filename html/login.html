@@ -13,6 +13,30 @@
 
 <body>
 
+    <Header class="header_cont">
+        <!-- #1.a. Logo -->
+        <a href="../html/index.html">
+            <img class="logo_img" src="../media/images/logo/logo_txt_opac.png" alt="logo text">
+        </a>
+        <!-- #1.b. Search Bar -->
+        <form action="/search" class="search_wrap" method="get">
+            <input type="text" class="search_bar" placeholder="Search">
+            <img class="search_btn" src="../media/svgs/search.svg" alt="search">
+        </form>
+        <!-- #1.c. Nav Buttons -->
+        <nav class="top_nav_wrap">
+            <a href="../html/index.html#shop_section">
+                <img class="top_nav_item" src="../media/svgs/shop.svg" alt="shop">
+            </a>
+            <a href="../html/login.html">
+                <img class="top_nav_item" src="../media/svgs/user.svg" alt="user">
+            </a>
+            <a href="../html/events.html">
+                <img class="top_nav_item" src="../media/svgs/events.svg" alt="user">
+            </a>
+        </nav>
+    </Header>
+
     <div class="form-container">
         <div class="form-box">
             <h2>Log In</h2>
@@ -34,20 +58,7 @@
     </div>
     
     <footer class="footer_cont">
-        <!-- 7.a. Payments Secured and Credit Cards Section -->
-        <div class="secure_wrap">
-            <div class="payment-info">
-                <p>PAYMENTS SECURED by Braintree | Progressive | Comoto Holdings, LLC © 2024 All Rights Reserved</p>
-            </div>
-            <div class="credit-cards">
-                <h4>We Accept:</h4>
-                <img src="https://via.placeholder.com/50x30.png?text=Visa" alt="Visa">
-                <img src="https://via.placeholder.com/50x30.png?text=Mastercard" alt="Mastercard">
-                <img src="https://via.placeholder.com/50x30.png?text=Amex" alt="American Express">
-                <img src="https://via.placeholder.com/50x30.png?text=Paypal" alt="PayPal">
-            </div>
-        </div>
-        <!-- 7.b. Legal Section -->
+        <!-- 7.a. Legal Section -->
         <div class="legal_wrap">
             <p>MOTOGEAR HUB © 2024 All Rights Reserved</p>
             <p><a href="#">Privacy Policy</a> | <a href="#">Terms & Conditions</a> | <a href="#">Accessibility

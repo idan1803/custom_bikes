@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Sour+Gummy:ital,wght@0,100..900;1,100..900&display=swap');
 
-* { /* VISUAL DEBUG */
+* {
+    /* VISUAL DEBUG */
     /* border: 2px solid rgb(58, 114, 72); */
 }
 
@@ -8,6 +9,7 @@ html {
     scroll-behavior: smooth;
     /* scrolling smooth */
 }
+
 /* Design is Mobile-first,
     Design for desktops from 1280×720 to 1920×1080
     Design for tablets from 601×962 to 1280×800
@@ -126,16 +128,16 @@ body {
     transform: scale(1.2);
 }
 
-/* ########################################################
-###   #7th Element in grid- Footer: Legal & Securiity   ###
-######################################################## */
+/* ##############################################
+######   #7th Element in grid- Footer   #########
+############################################=#### */
 /* General Footer Styling */
 .footer_cont {
     background-color: #333;
     color: #fff;
-    padding: 20px;
-    font-family: Arial, sans-serif;
+    padding: 1em;
     text-align: center;
+    width: 100%;
 }
 
 .footer_cont a {
@@ -147,45 +149,26 @@ body {
     text-decoration: underline;
 }
 
-/* Payments Secured and Credit Cards Section */
-.secure_wrap {
-    display: flex;
-    flex-wrap: wrap; /* Allows wrapping on smaller screens */
-    justify-content: space-between;
-    align-items: center;
-    gap: 20px;
-    padding: 10px 0;
+.legal_wrap, .payment_info , .social_links{
+    flex: 1 1 100%;
+    text-align: center;
     border-bottom: 1px solid #444;
 }
 
-.payment-info {
-    flex: 1 1 100%; /* Take full width on small screens */
-    text-align: left;
+.social_links ul li{
+    display: inline;
+    margin-inline: 2em;
 }
 
-.credit-cards {
-    flex: 1 1 100%; /* Take full width on small screens */
-    text-align: left;
-}
-
-.credit-cards h4 {
-    margin: 0 0 10px;
-}
-
-.credit-cards img {
-    margin-right: 10px;
+.payment_info img {
+    margin: 1em;
     max-width: 50px;
     height: auto;
 }
 
-/* Legal Section */
-.legal_wrap {
-    padding: 10px 0;
-    font-size: 14px;
-}
-
-.legal_wrap p {
-    margin: 5px 0;
+.credit-cards img {
+    margin: 1em;
+    max-width: 50px;
 }
 
 /* #################################################
@@ -209,8 +192,18 @@ body {
     border-bottom: 2px solid #000;
 }
 
-.btn_global:visited{
+.btn_global:visited {
     color: #000;
+}
+
+.return_btn {
+    width: 1.8rem;
+    height: 2rem;
+    margin-inline: 1em;
+}
+
+.return_btn:hover {
+    transform: scale(1.2);
 }
 
 /* #################################################
@@ -241,7 +234,8 @@ body {
     border: 2px solid #ccc;
     margin-right: 10px;
     position: relative;
-    transition: all 0.3s ease; /* Smooth transition for hover effect */
+    transition: all 0.3s ease;
+    /* Smooth transition for hover effect */
 }
 
 .radio_btn:before {
@@ -257,10 +251,11 @@ body {
 }
 
 .radio_lbl_global:hover .radio_btn {
-    border: 3px solid black; /* Wider and black border on hover */
+    border: 3px solid black;
+    /* Wider and black border on hover */
 }
 
-.radio_lbl_global .radio_input:checked + .radio_btn:before {
+.radio_lbl_global .radio_input:checked+.radio_btn:before {
     background-color: #f1c40f;
     /* Yellow color when selected */
 }
@@ -304,7 +299,8 @@ body {
         align-items: stretch;
     }
 
-    .dropdown,    .model-dropdown {
+    .dropdown,
+    .model-dropdown {
         width: 100%;
         /* Full width on smaller screens */
     }
@@ -331,32 +327,12 @@ body {
         margin-bottom: 1rem;
     }
 
-    .secure_wrap {
-        flex-wrap: nowrap; /* Disable wrapping on larger screens */
+    /* product pages */
+    .product_cont {
+        grid-template-columns: 1fr;
     }
 
-    /* Footer */
-    .payment-info {
-        flex: 2; /* Larger space for payment info */
-        text-align: left;
-    }
-
-    .credit-cards {
-        flex: 1; /* Smaller space for credit cards section */
-        text-align: right;
+    .sidebar {
+        margin-bottom: 1rem;
     }
 }
-
-@media (min-width: 1024px) {
-
-    /* Footer */
-    .footer_cont {
-        text-align: left; /* Align text to left on large screens */
-        padding: 40px 60px;
-    }
-
-    .legal_wrap {
-        font-size: 16px; /* Larger font for better readability */
-    }
-}
-

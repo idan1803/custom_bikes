@@ -1,40 +1,28 @@
 @import url('../css/global.css');
 
-header {
-  background-color: #333;
-  color: #fff;
-  padding: 1rem;
-  text-align: center;
-}
-
-footer {
-  background-color: #333;
-  color: #fff;
-  text-align: center;
-  padding: 1rem;
-}
-
-h1,h2 {
+h1,
+h2 {
   margin: 0 0 1rem;
 }
 
-/* Layout */
-.container {
-  display: grid;
-  grid-template-columns: 1fr 3fr;
-  gap: 1rem;
-  padding: 1rem;
+.layout_cont {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  /* margin: 2em 2em; */
 }
 
-/* Sidebar */
-.sidebar_hdr {
+.product_hdr {
   background-color: #fff;
   color: black;
   display: flex;
   justify-content: space-between;
 }
 
-.sidebar,.results_hdr {
+.product_cont,
+.results_hdr {
+  margin-top: 1.5em;
   background-color: #fff;
   padding: 1rem;
   border: 1px solid #ddd;
@@ -42,7 +30,7 @@ h1,h2 {
 }
 
 .filter-group {
-  margin-bottom: 1rem;
+  margin: 1rem;
 }
 
 .filter-group label {
@@ -58,11 +46,12 @@ h1,h2 {
   margin-top: 0.5rem;
 }
 
-#price-range {
+#warrenty-range {
   width: 100%;
   margin-inline: -0.5rem;
 }
 
+.warrenty-labels,
 .price-labels {
   display: flex;
   justify-content: space-between;
@@ -75,170 +64,34 @@ h1,h2 {
   font-weight: bold;
 }
 
-.radio_cont {
+/* Layout for Image Selection Radio*/
+.img_selector_cont {
   display: flex;
-  gap: 20px;
-  margin-bottom: 20px;
+  justify-content: space-around;
+  align-content: center;
 }
 
-.radio_cont_lbl {
-  display: flex;
-  align-items: center;
-  cursor: pointer;
-  font-size: 16px;
+.image_wrap {
+ width: 50vw;
 }
 
-.radio_cont_lbl input {
-  display: none;
-  /* Hide default radio button */
-}
-
-.radio_cont_lbl input:checked+.radio-btn:before {
-  background-color: #f1c40f;
-    /* Yellow color when selected */
-}
-
-/* Product Grid */
-.product_grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  gap: 1rem;
-}
-
-.product_card {
-  background-color: #fff;
-  border: 1px solid #ddd;
-  border-radius: 5px;
-  text-align: center;
-  padding: 1rem;
-}
-
-.product_card img {
-  width: 50%;
-  height: auto;
-  border-bottom: 1px solid #ddd;
-  margin-bottom: 1rem;
-}
-
-.product_card h3 {
-  margin: 0 0 0.5rem;
-}
-
-.product_card p {
-  font-size: 1.1rem;
-  color: #555;
-}
-
-/* #################################################
-############  Selected Product Switcher   ##########
-################################################# */
-
-/* .radio_cont {
-  display: flex;
-  justify-content: center;
-  margin-bottom: 20px;
-} */
-
-.parts_filter_lbl {
-  display: flex;
-  align-items: center;
-  margin-right: 20px;
-  cursor: pointer;
-}
-
-.radio-btn {
-  width: 20px;
-  height: 20px;
-  border: 2px solid #007bff;
-  border-radius: 50%;
-  margin-right: 8px;
-  position: relative;
-  display: inline-block;
-}
-
-.radio-btn:before {
-  content: '';
-  position: absolute;
-  top: 4px;
-  left: 4px;
-  width: 10px;
-  height: 10px;
-  border-radius: 50%;
-  background-color: #007bff;
-  opacity: 0;
-  transition: opacity 0.3s ease;
-}
-
-input[type="radio"]:checked + .radio-btn:before {
-  opacity: 1;
-}
-
-.label-text {
-  font-size: 16px;
-  color: #333;
-}
-
-/* Hide the radio buttons */
-input[type="radio"] {
-  display: none;
-}
-
-/* Image container */
-.image-container {
-  width: 300px;
-  height: 200px;
-  margin-top: 20px;
-  position: relative;
-}
-
-/* Image settings */
-.image {
-  position: absolute;
-  top: 0;
-  left: 0;
+.product_image {
   width: 100%;
-  height: 100%;
-  background-size: cover;
-  background-position: center;
-  opacity: 0;
-  transition: opacity 0.3s ease;
+  object-fit: cover;
+  display: block;
 }
 
-/* Background images */
-.image-oem {
-  background-image: url('../media/images/products/product1/akrapovic_exhaust_system_yamaha_r32015_750x750.jpg');
+/* Image Displayig Condition */
+#radio-oem:checked + img#img-eom {
+  display: block;
 }
 
-.image-refurbished {
-  background-image: url('../media/images/products/product1/arrow_pro_race_slip_on_exhaust_suzuki_gsxr100020072008_stainless_steel_750x750.jpg');
+/* Show Refurbished image when radio-refurbished is selected */
+#radio-refurbished:checked + img#img-refurbished {
+  display: block;
 }
 
-.image-spare {
-  background-image: url('..//home/idan/Dev/Full_Stack_Class/Main_Projects/motogear_hub/media/images/products/product1/graves_motorsports_hexagonal_slip_on_exhaust_carbon_fiber_750x750.jpg');
-}
-
-/* Show images based on radio selection */
-input[type="radio"]#oem:checked ~ .image-container .image-oem {
-  opacity: 1;
-}
-
-input[type="radio"]#refurbished:checked ~ .image-container .image-refurbished {
-  opacity: 1;
-}
-
-input[type="radio"]#spare:checked ~ .image-container .image-spare {
-  opacity: 1;
-}
-
-/* #################################################
-#####  Responsive Design for smaller screens   #####
-################################################# */
-@media (max-width: 768px) {
-  .container {
-    grid-template-columns: 1fr;
-  }
-
-  .sidebar {
-    margin-bottom: 1rem;
-  }
+/* Show Used image when radio-used is selected */
+#radio-used:checked + img#img-used {
+  display: block;
 }
